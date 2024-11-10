@@ -1,0 +1,110 @@
+/* Estilos base */
+.main-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 180px;
+    background-color: #f9f9f9;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilos para la sección de contacto */
+.contact__title,
+.social__title {
+    font-size: 24px;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #2d2a2a;
+}
+
+.contact__description {
+    color: #777;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.contact__form-group {
+    margin-bottom: 15px;
+}
+
+.contact__form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.contact__form-input,
+.contact__form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.contact__form-button {
+    padding: 10px 20px;
+    font-size: 13px;
+    color: white;
+    background-color: #c7a17a;
+    border: none;
+    cursor: pointer;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.social__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.social__icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social__icon-img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Media queries */
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {
+    .main-content {
+        display: flex;
+        width: 100%;
+        gap: 0;
+    }
+
+    .contact,
+    .social {
+        width: 50%;
+    }
+
+    .contact {
+        padding-right: 20px;
+    }
+
+    .social {
+        padding-left: 20px;
+        align-items: flex-start;
+    }
+
+    .contact__form-input,
+    .contact__form-textarea {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 1200px) {}
