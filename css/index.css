@@ -1,0 +1,396 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+}
+
+/* Reset CSS básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 200px);
+}
+
+
+/* Header */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header__top {
+  background-color: #111111;
+  border-bottom: 1px solid #444;
+  height: 40px;
+}
+
+.header__bottom {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  padding: 10px 20px;
+  justify-content: center;
+  height: 80px;
+}
+
+.header__logo {
+  max-width: 126px;
+}
+
+.header__logo img {
+  height: 40px;
+}
+
+.header__menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+}
+
+.header__icon-burguer {
+  height: 20px;
+}
+
+.header__nav {
+  display: none;
+
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__nav.show {
+  display: block;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #444;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 500;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 300px;
+  background-color: #FFF;
+  transition: transform .25s ease, -webkit-transform .25s ease;
+}
+
+.nav__list {
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav__link {
+  margin-bottom: 10px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  min-height: 50px;
+  border-bottom: 1px solid rgba(129, 129, 129, .2);
+  color: #2d2a2a;
+  text-transform: uppercase;
+  letter-spacing: .2px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.nav__link--contacto {
+  padding-left: 40px;
+  background-image: url(https://tiendadecafe.com.ar/wp-content/uploads/2021/03/ico-mobile-contacto.png);
+  background-repeat: no-repeat;
+  background-position: 16px center;
+}
+
+.nav__link.active {
+  color: #c7a17a;
+}
+
+
+/*Estilos de principal*/
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #111111;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.footer__column--logo {
+  margin-top: 10px;
+  width: 120px;
+}
+
+.footer__column {
+  display: flex;
+}
+
+.footer__column--links,
+.footer__column--help {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer__title {
+  color: #C7A173;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__item {
+  padding: 9px 0px;
+  line-height: 18px;
+}
+
+.footer__link {
+  color: #FFFFFF99;
+  text-decoration: none;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+}
+
+.title--subscribe,
+.title--conectate {
+  text-align: center;
+  margin: 0 0 20px;
+
+}
+
+.footer__form {
+  display: flex;
+}
+
+.footer__input {
+  background-color: #111111;
+  border: 0.5px solid #999;
+  color: #fff;
+  padding: 10px;
+  flex: 1;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.footer__input::placeholder {
+  color: #999;
+}
+
+.footer__button {
+  background-color: #c7a17a;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.footer__input,
+.footer__button {
+  border-radius: 0;
+}
+
+.footer__bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__text {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0 0.93rem;
+}
+
+.footer__bottom p:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.footer__social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.footer__social-icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Media queries */
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {
+
+  /* Header */
+  .header__menu-button {
+    display: none;
+  }
+
+  .header__bottom {
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .header__logo {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    max-width: 126px;
+  }
+
+  .header__logo img {
+    position: relative;
+    left: 0;
+    transform: none;
+    height: 74px;
+  }
+
+  .header__nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+  }
+
+  .nav__link--contacto {
+    background-image: none;
+    padding-left: 15px;
+  }
+
+  .nav__link--inicio {
+    display: none;
+  }
+
+  /* Footer */
+
+  .footer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+
+  .footer__column--logo {
+    width: 20%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .footer__column {
+    display: flex;
+    gap: 15px;
+    width: 30%;
+  }
+
+  .footer__column--links,
+  .footer__column--help {
+    width: 50%;
+  }
+
+  .footer__column--subscribe,
+  .footer__column--conectate {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__column--subscribe {
+    margin-bottom: 20px;
+  }
+
+  .footer__column--subscribe,
+  .footer__column--conectate {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media (min-width: 1200px) {}
