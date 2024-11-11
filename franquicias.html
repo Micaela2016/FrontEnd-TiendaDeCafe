@@ -1,12 +1,266 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Franquicias - Tienda de cafe</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace a un archivo CSS -->
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/franquicias.css" />
+    <!-- Enlace a un archivo CSS -->
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__top"></div>
+      <div class="header__bottom">
+        <button class="header__menu-button" onclick="toggleMenu()">
+          <img
+            src="./img/icon-burguer.png"
+            alt="icon-burguer"
+            class="header__icon-burguer"
+          />
+        </button>
+        <a href="/" class="header__logo">
+          <img
+            src="https://tiendadecafe.com.ar/wp-content/uploads/2021/02/tienda-de-cafe.png"
+            alt="Tienda de Café Logo"
+          />
+        </a>
+        <nav class="header__nav" id="navMenu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/" class="nav__link nav__link--inicio">INICIO</a>
+            </li>
+            <li class="nav__item">
+              <a href="tienda.html" class="nav__link">NUESTRO CAFÉ</a>
+            </li>
+            <li class="nav__item">
+              <a href="tutoriales.html" class="nav__link">TUTORIALES</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">LOCALES</a></li>
+            <li class="nav__item">
+              <a href="menu-tienda.html" class="nav__link">NUESTRO MENÚ</a>
+            </li>
+            <li class="nav__item">
+              <a href="trabaja-en-tdc.html" class="nav__link"
+                >TRABAJÁ CON NOSOTROS</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="franquicias.html" class="nav__link">FRANQUICIAS</a>
+            </li>
+            <li class="nav__item">
+              <a href="contacto.html" class="nav__link nav__link--contacto"
+                >CONTACTO</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="franquicias">
+        <h6 class="franquicias__subtitle">CONOCÉ TODAS LAS OPCIONES</h6>
+        <h3 class="franquicias__title">CONVERTITE EN FRANQUICIADO</h3>
+        <div class="franquicias__divider"></div>
+        <p class="franquicias__description">
+          Querés ser parte de este equipo? Dejanos tus datos para recibir mas
+          información, y nos pondremos en contacto para contarte todas las
+          posibilidades de tu próxima franquicia Tienda de Café!
+        </p>
+        <form action="" class="franquicias__form">
+          <div class="franquicias__container">
+            <div class="franquicias__form-group">
+              <label for="nombre" class="franquicias__form-label">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="franquicias__form-input"
+                required
+              />
+            </div>
+            <div class="franquicias__form-group">
+              <label for="apellido" class="franquicias__form-label"
+                >Apellido</label
+              >
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                class="franquicias__form-input"
+                required
+              />
+            </div>
+          </div>
+          <div class="franquicias__container">
+            <div class="franquicias__form-group">
+              <label for="e-mail" class="franquicias__form-label">E-mail</label>
+              <input
+                type="text"
+                id="e-mail"
+                name="e-mail"
+                class="franquicias__form-input"
+                required
+              />
+            </div>
+            <div class="franquicias__form-group">
+              <label for="telefono" class="franquicias__form-label"
+                >Teléfono</label
+              >
+              <input
+                type="text"
+                id="telefono"
+                name="telefono"
+                class="franquicias__form-input"
+                required
+              />
+            </div>
+          </div>
+          <div class="franquicias__container">
+            <div class="franquicias__form-group">
+              <label
+                for="¿como llegaste a nosotros?"
+                class="franquicias__form-label"
+                >¿Cómo llegaste a nosotros?</label
+              >
+              <input
+                type="text"
+                id="¿como llegaste a nosotros"
+                name="¿como llegaste a nosotros"
+                class="franquicias__form-input"
+                required
+              />
+            </div>
+            <div class="franquicias__form-group">
+              <label
+                for="¿en que zona te interesaria instalar la franquicia?"
+                class="franquicias__form-label"
+                >¿En qué zona te interesaría instalar la franquicia?</label
+              >
+              <input
+                type="text"
+                id="¿en que zona te interesaria instalar la franquicia?"
+                name="¿en que zona te interesaria instalar la franquicia?"
+                class="franquicias__form-input"
+                required
+              />
+            </div>
+          </div>
+          <div class="franquicias__form-group">
+            <button type="submit" class="franquicias__form-button">
+              ENVIAR
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__column--logo">
+          <img
+            src="https://tiendadecafe.com.ar/wp-content/uploads/2021/02/tienda-de-cafe.png"
+            alt="Tienda de Café Logo"
+            class="footer__logo"
+          />
+        </div>
+        <section class="footer__column">
+          <div class="footer__column--links">
+            <h3 class="footer__title">CONTENIDOS</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="/" class="footer__link">Inicio</a>
+              </li>
+              <li class="footer__item">
+                <a href="tienda.html" class="footer__link">Nuestro Café</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Locales</a>
+              </li>
+              <li class="footer__item">
+                <a href="menu-tienda.html" class="footer__link">Nuestro Menú</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column--help">
+            <h3 class="footer__title">NECESITÁS AYUDA</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="tutoriales.html" class="footer__link">Tutoriales</a>
+              </li>
+              <li class="footer__item">
+                <a href="trabaja-en-tdc.html" class="footer__link"
+                  >Trabaja en TDC</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="franquicias.html" class="footer__link">Franquicias</a>
+              </li>
+              <li class="footer__item">
+                <a href="contacto.html" class="footer__link">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-</body>
+        <div>
+          <div class="footer__column--subscribe">
+            <h3 class="footer__title title--subscribe">
+              SUSCRIBITE A NUESTRO NEWSLETTER
+            </h3>
+            <form class="footer__form">
+              <input
+                type="email"
+                placeholder="Tu email"
+                class="footer__input"
+                required
+              />
+              <button type="submit" class="footer__button">SUSCRIBIRME</button>
+            </form>
+          </div>
+
+          <div class="footer__column--conectate">
+            <h3 class="footer__title title--conectate">
+              CONECTATE CON NOSOTROS
+            </h3>
+            <div class="footer__social-icons">
+              <a href="https://www.facebook.com/Tiendadecafe"
+                ><img
+                  src="./img/facebook.png"
+                  alt="Facebook"
+                  class="footer__social-icon"
+              /></a>
+              <a href="https://www.instagram.com/tiendadecafear/"
+                ><img
+                  src="./img/instagram.png"
+                  alt="Instagram"
+                  class="footer__social-icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__text">
+          &copy; Copyright 2021 Tienda de café - Todos los derechos reservados.
+        </p>
+        <p class="footer__text">
+          Todos los logos, productos, marcas y nombres aquí utilizados son
+          propiedad registrada.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
