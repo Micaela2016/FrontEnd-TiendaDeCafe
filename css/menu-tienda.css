@@ -18,7 +18,7 @@
 
 .menu-tienda__title-bottom {
   color: #fff;
-  font-size: 36px;
+  font-size: 48px;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
   margin-bottom: 20px;
   max-width: 10ch;
@@ -55,12 +55,40 @@
   gap: 32px;
 }
 
-.menu_tienda__img {
+.menu-tienda__img {
+  width: 100%;
+  position: relative;
+}
+
+.menu-tienda__img img {
   width: 100%;
 }
 
-.menu_tienda__img img {
-  width: 100%;
+.menu-tienda__container {
+  position: absolute;
+  padding: 30px;
+}
+
+.menu-tienda__container.menu-tienda__container--bottom {
+  bottom: 0;
+  left: 0;
+}
+
+.menu-tienda__container.menu-tienda__container--top {
+  top: 0;
+  right: 0;
+}
+
+.menu-tienda__item-description {
+  background-color: white;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  padding: 6px 10px;
+}
+
+.menu-tienda__item-title {
+  font-size: 36px;
+  color: white;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
 }
 
 /* Estilos sección menu*/
@@ -125,7 +153,7 @@
   text-align: center;
 }
 
-.menu-tienda__description {
+.menu-tienda__description-banner {
   color: #fff;
   font-weight: 400;
   font-family: "Lato", Arial, Helvetica, sans-serif;
@@ -144,4 +172,27 @@
   font-family: "Lato", Arial, Helvetica, sans-serif;
   font-weight: 700;
   margin: 0 auto;
+}
+
+/* Media queries */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .menu-tienda__fila {
+    flex-direction: row;
+  }
+  .menu-tienda__item-title--right {
+    text-align: right;
+  }
+
+  .menu-tienda__container.menu-tienda__container--top {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
 }
