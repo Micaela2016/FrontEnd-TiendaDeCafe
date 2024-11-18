@@ -35,14 +35,51 @@
 /* Estilos sección galería*/
 .menu-tienda__galeria {
   padding-top: 35px;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-tienda__fila {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  gap: 32px;
+}
+
+.menu-tienda__column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+
+.menu_tienda__img {
+  width: 100%;
+}
+
+.menu_tienda__img img {
+  width: 100%;
 }
 
 /* Estilos sección menu*/
 .menu-tienda__menu {
   background-color: #dddddd;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 16px;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.menu-tienda__carta {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+}
+
+.menu-tienda__carta img {
+  width: 33%;
 }
 
 .menu-tienda__title-menu {
@@ -62,6 +99,10 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .menu-tienda__title-banner-top {
@@ -77,10 +118,9 @@
 
 .menu-tienda__title-banner-bottom {
   color: #c7a17a;
-  font-size: 36px;
+  font-size: 56px;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
   margin-bottom: 20px;
-  max-width: 12ch;
   line-height: 1.2;
   text-align: center;
 }
@@ -91,4 +131,17 @@
   font-family: "Lato", Arial, Helvetica, sans-serif;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.menu-tienda__button {
+  padding: 10px 20px;
+  font-size: 13px;
+  color: white;
+  border-color: rgba(255, 255, 255, 20);
+  border-width: 1px;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin: 0 auto;
 }
