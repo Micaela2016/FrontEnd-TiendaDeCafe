@@ -58,15 +58,22 @@
 .menu-tienda__img {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .menu-tienda__img img {
   width: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu-tienda__img img:hover {
+  transform: scale(1.1);
 }
 
 .menu-tienda__container {
   position: absolute;
   padding: 30px;
+  z-index: 99;
 }
 
 .menu-tienda__container.menu-tienda__container--bottom {
