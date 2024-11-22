@@ -223,6 +223,10 @@
   margin: 0 auto;
 }
 
+.menu-tienda__carta-full {
+  max-width: 50vw;
+}
+
 /* Media queries */
 @media (min-width: 576px) {
 }
@@ -241,6 +245,9 @@
 }
 
 @media (min-width: 1024px) {
+  .menu-tienda__carta-full {
+    max-width: 80vw;
+  }
 }
 
 @media (min-width: 1200px) {
