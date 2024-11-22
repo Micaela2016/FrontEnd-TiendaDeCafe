@@ -27,6 +27,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    mainImage.addEventListener('mousemove', (e) => {
+        const rect = mainImage.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+    
+        mainImage.style.transformOrigin = `${x}% ${y}%`;
+        mainImage.style.transform = 'scale(2)';
+    });
+    
+    mainImage.addEventListener('mouseleave', () => {
+        mainImage.style.transform = 'scale(1)';
+        mainImage.style.transformOrigin = 'center';
+    });
+
     
     upButton.addEventListener('click', function () {
         // Solo podemos ir "hacia atrás" si no estamos en el primer grupo
@@ -46,22 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
             currentIndex = totalImages - itemsPerPage; // Ajusto el índice al último grupo
         }
         updateCarrusel(); 
-
-
-        mainImage.addEventListener('mousemove', (e) => {
-            const rect = mainImage.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width) * 100;
-            const y = ((e.clientY - rect.top) / rect.height) * 100;
-        
-            mainImage.style.transformOrigin = `${x}% ${y}%`;
-            mainImage.style.transform = 'scale(2)';
-        });
-        
-        mainImage.addEventListener('mouseleave', () => {
-            mainImage.style.transform = 'scale(1)';
-            mainImage.style.transformOrigin = 'center';
-        });
     });
+
+
 
    
     updateCarrusel();
