@@ -1,3 +1,4 @@
+// carrousel 1
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.thumbnail-wrapper');
     const mainImage = document.getElementById('main-image');
