@@ -83,3 +83,51 @@ h2 a {
     position: absolute;
     left: 200px;
 }
+
+@media (max-width: 480px) {
+    /* Ajusta el contenedor principal */
+    .main-content {
+        padding: 10px 3vw;
+        padding-top: 120px; 
+    }
+
+    /* Contenedor de productos: diseño en columna */
+    .productos_container {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+    }
+
+    
+    .cafe_container {
+        width: 90%; 
+        margin-bottom: 20px; 
+    }
+
+   
+    .cafe_container img {
+        width: 100%; 
+        height: auto;
+    }
+
+    /* Efecto hover en móviles: mantener simple */
+    .imagen_hover {
+        transition: none; 
+    }   
+    h2 a {
+        font-size: 12px; 
+    }    
+    .nombres_container {
+        flex-direction: column;
+        align-items: center; 
+    }
+    #minka_container {
+        width: 100%; 
+        margin-bottom: 40px; 
+    }   
+    #nombre-Minka {
+        position: static; 
+        text-align: center; 
+    }
+}
+

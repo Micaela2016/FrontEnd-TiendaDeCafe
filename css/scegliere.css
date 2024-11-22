@@ -303,10 +303,97 @@
     cursor: pointer;
 }
 
+/* ----mobile--- */
+@media (max-width: 480px) {
+   
+    .main-content {
+        padding: 10px 3vw;
+        padding-top: 100px; 
+    }
+    /* Sección 1: Divs apilados */
+    #seccion1 {
+        flex-direction: column; 
+        margin-top: 20px;
+    }
+    #div-izquierdo,
+    #div-derecho {
+        width: 100%; 
+        padding: 10px; 
+    }   
+    .thumbnail-wrapper img {
+        width: 80px;
+        height: 80px;
+        margin: auto; 
+    }
+    .thumbnail-wrapper {
+        height: auto;
+        gap: 5px;
+    }
+    /* Imagen principal del producto */
+    .product-main img {
+        max-width: 100%; 
+        height: auto;
+    }
+    #up-button, #down-button {
+        font-size: 12px; 
+        padding: 5px; 
+    }   
+    .carousel2-container {
+        max-width: 100%; 
+        border-radius: 0; 
+    }
+   
+    .carousel-button {
+        width: 40px; 
+        height: 60px;
+        font-size: 18px;
+    }   
+    #title {
+        font-size: 18px; 
+    }
+    .titulito {
+        font-size: 12px; 
+    }    
+    .breadcrumb {
+        font-size: 10px; 
+    }
+    /* Miniaturas con hover */
+    .thumbnail-wrapper img:hover {
+        filter: none; 
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .carousel-button {
         top: 60%; /* Ajusta según sea necesario */
         padding: 8px;
+    }
+}
+/* ----tablet----- */
+@media (min-width: 480px) and (max-width: 768px) {
+    .main-content {
+        padding: 15px 4vw;
+    }
+
+    #seccion1 {
+        flex-direction: row;
+        /* Divs en fila */
+    }
+
+    #div-izquierdo,
+    #div-derecho {
+        flex: 1;
+        padding: 15px;
+    }
+
+    .thumbnail-wrapper img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .carousel2-container {
+        max-width: 90%;
     }
 }
