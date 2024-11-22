@@ -1,7 +1,7 @@
 /* Estilos sección portada*/
 .menu-tienda__portada {
   padding: 270px 10%;
-  background-image: url(../img/menu-tienda-portada.jpg);
+  background-image: url(../img/menu/menu-tienda-portada.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -172,7 +172,7 @@
 /* Estilos sección banner*/
 .menu-tienda__banner {
   padding: 270px 10%;
-  background-image: url(../img/menu-banner.jpg);
+  background-image: url(../img/menu/menu-banner.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
