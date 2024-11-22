@@ -106,6 +106,16 @@
   margin: 30px auto;
 }
 
+.menu-tienda__title-menu {
+  font-size: 20px;
+  max-width: 100%;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+}
+
 .menu-tienda__carta {
   margin-top: 30px;
   display: flex;
@@ -117,14 +127,46 @@
   width: 33%;
 }
 
-.menu-tienda__title-menu {
-  font-size: 20px;
-  max-width: 100%;
-  font-family: "Oswald", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  line-height: 1.5;
-  display: flex;
+.menu-tienda__modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 9999;
+}
+
+.menu-tienda__modal.active {
+  display: flex;
+}
+
+.menu-tienda__modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.menu-tienda__modal-content button {
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-tienda__modal-content button img {
+  width: 20px;
+}
+
+.menu-tienda__modal-content button:hover img {
+  filter: drop-shadow(0 0 2px #ffff);
 }
 
 /* Estilos sección banner*/

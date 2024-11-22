@@ -18,6 +18,7 @@
     <!-- Enlace a un archivo CSS -->
     <link rel="stylesheet" href="./css/menu-tienda.css" />
     <script src="./js/toggleMenu.js" defer></script>
+    <script src="./js/modalMenuTienda.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -143,10 +144,43 @@
       </section>
       <section class="menu-tienda__menu">
         <h3 class="menu-tienda__title-menu">CONOCÉ TODAS NUESTRAS OPCIONES</h3>
+        <div class="menu-tienda__modal" id="modal1" onclick="closeModal1()">
+          <div class="menu-tienda__modal-content">
+            <button onclick="atras1()">
+              <img src="./img/left-arrow.svg" alt="" />
+            </button>
+            <img src="./img/menu-carta-1.jpg" alt="" />
+            <button onclick="siguiente1()">
+              <img src="./img/right-arrow.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="menu-tienda__modal" id="modal2" onclick="closeModal2()">
+          <div class="menu-tienda__modal-content">
+            <button onclick="atras2()">
+              <img src="./img/left-arrow.svg" alt="" />
+            </button>
+            <img src="./img/menu-carta-2.jpg" alt="" />
+            <button onclick="siguiente2()">
+              <img src="./img/right-arrow.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="menu-tienda__modal" id="modal3" onclick="closeModal3()">
+          <div class="menu-tienda__modal-content">
+            <button onclick="atras3()">
+              <img src="./img/left-arrow.svg" alt="" />
+            </button>
+            <img src="./img/menu-carta-3.jpg" alt="" />
+            <button onclick="siguiente3()">
+              <img src="./img/right-arrow.svg" alt="" />
+            </button>
+          </div>
+        </div>
         <div class="menu-tienda__carta">
-          <img src="./img/menu-carta-1.jpg" alt="" />
-          <img src="./img/menu-carta-2.jpg" alt="" />
-          <img src="./img/menu-carta-3.jpg" alt="" />
+          <img src="./img/menu-carta-1.jpg" alt="" onclick="openModal1()" />
+          <img src="./img/menu-carta-2.jpg" alt="" onclick="openModal2()" />
+          <img src="./img/menu-carta-3.jpg" alt="" onclick="openModal3()" />
         </div>
       </section>
       <section class="menu-tienda__banner">
