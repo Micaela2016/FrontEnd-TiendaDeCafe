@@ -1,0 +1,85 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 5vw;
+    padding-top: 180px;
+    background-color: #fff;
+}
+
+.productos_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cafe_container{
+    position: relative; 
+    width: 30%; /* Cada contenedor de café ocupa el 30% del ancho */
+    overflow: hidden; 
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   
+}
+
+
+.cafe_container img {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+.imagen_fija {
+    transition: opacity 0.5s ease-in-out; /* Añadir transición a la imagen fija para suavizar el cambio */
+}
+
+.imagen_hover {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0; /* La imagen hover está oculta inicialmente */
+    transition: opacity 3s ease-in-out,  transform 4s ease-in-out; /* Efecto combinado */
+}
+
+.cafe_container:hover .imagen_hover {
+    opacity: 1; /* Cuando se hace hover, la imagen hover se vuelve visible */
+    transform: scale(1.2); 
+}
+
+.cafe_container:hover .imagen_fija {
+    opacity: 0; /* para q la imagen fija desaparezca al hacer hover */
+}
+
+.nombres_container{
+    display: flex;
+    justify-content:space-around;
+}
+
+h2 a {
+    color: rgb(77, 75, 75); 
+    text-decoration: none; 
+    font-size: 14px;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+  }
+  
+  h2 a:hover {
+    color: #808080; 
+  }
+
+#minka_container{
+    width: 30%;
+    margin-bottom: 80px;
+
+}
+
+#nombre-Minka{
+    position: absolute;
+    left: 200px;
+}

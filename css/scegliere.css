@@ -1,0 +1,314 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 5vw;
+    padding-top: 180px;
+    background-color: #fff;
+}
+.sections-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#seccion1 {
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    padding: 20px;   
+}
+
+#div-izquierdo,
+#div-derecho {
+    flex: 1; /* para que ambos divs se ajusten al espacio disponible */
+    border: 1px solid black;
+}
+.flex-column-start {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+                /* -------estilo div izquierdo---------------------- */
+#div-izquierdo {   
+    padding: 20px;   
+}
+
+#carousel1-container {   
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+
+.product-main img {
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#up-button, #down-button {
+    background-color:white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0;
+    font-size: 16px;
+    width: 50%;
+    transition: background-color 0.2s ease;
+}
+.botones{
+    display: flex;   
+}
+
+#up-button:hover, #down-button:hover {
+    background-color: #d8d4d4;
+}
+
+
+.thumbnail-wrapper {
+    overflow-y: hidden; 
+    position: relative;  
+    height: 420px; /* Espacio para 3 miniaturas */
+    display: flex;
+    flex-direction: column;    
+    gap: 10px;
+    transition: transform 0.3s ease;
+    width: 100%;
+   
+}
+
+/* miniaturas individuales */
+.thumbnail-wrapper img {
+    width: 130px;
+    height: 130px;   
+    display: block; 
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+/* porción para ocultar imágenes 4 y 5 */
+.thumbnail-wrapper img:nth-child(n+4) {
+    display: none; 
+}
+
+
+.thumbnail-wrapper img:hover {    
+    filter: grayscale(100%);
+}
+
+ /* ------------------------estilo div-derecho---------------- */
+#nav-items{
+    margin-top: 3px;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.breadcrumb {
+   
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    color: #737373;
+    font-size: 8;
+    
+}
+
+.breadcrumb-item a {
+    color: #737373;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: black;
+    font-weight: bold;
+}
+#roomy{
+    display: flex;
+    align-items: center;
+    gap:0;
+  
+}
+
+#roomy button {
+    background-color: white;
+    border: none; 
+    outline: none;    
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 40px;    
+    height: 40px;
+    cursor: pointer; 
+}
+
+#roomy button i {
+    font-size: 14px;   
+    font-style: none; 
+}
+
+
+
+#titulo{
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 12;
+    font-weight: normal;
+}
+
+.descripcion{
+    font-family:"Lato", Arial, Helvetica, sans-serif;
+    font-size: 10;
+    color: #737373 !important;
+}
+.bold-text {
+    font-weight: bold;
+}
+
+#seccion2 {
+    display: flex;
+    flex-direction: column;  
+    width: 100%;
+    padding: 10px;
+    
+}
+#title{
+    float: left;
+   
+    margin-left: 0;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    font-weight:300;
+    color: black;
+}
+#linea{
+    width: 3%;
+    height: 2px;
+    background-color: #bc713d;
+    margin: 10px 0;
+}
+.titulito{
+    color: rgb(58, 56, 56); 
+    text-decoration: none; 
+    font-size: 14px;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.carousel2-container {
+    position: relative;
+    width: 100%;
+    max-width: 120em;       
+    border-radius: 1em;
+    background-color: white;   
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden; 
+    transform: translateX(0%);
+}
+
+.carrusel-item {
+    flex: 0 0 25%; /* para mostrar solo 4 elementos */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carrusel-item.visible {    
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.imagen-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.imagen-container img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+.imagen-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 3s ease-in-out,  transform 2.5s ease-in-out;
+}
+
+.imagen-container:hover .imagen-hover {
+    opacity: 1;
+    transform: scale(1.2); 
+    transition: opacity 2.5s ease-in-out, transform 2s ease-in-out;
+}
+
+.imagen-container:hover .imagen-fija {
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: black;
+    font-size: 26px;
+    border: none;
+    border-radius: 25%;
+    width: 50px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 2;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-button.left {
+    left: 2px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+#puntos {
+    width: 100%;
+    padding: .4em;
+    margin: 1cm 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.punto i {
+    margin: 0.5em;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .carousel-button {
+        top: 60%; /* Ajusta según sea necesario */
+        padding: 8px;
+    }
+}
