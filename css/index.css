@@ -2,11 +2,8 @@ html,
 body {
   height: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column;
   padding: 0;
   border: 0;
-  vertical-align: baseline;
   font: inherit;
   font-size: 100%;
 }
@@ -22,15 +19,14 @@ body {
 
 .content {
 
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 200px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 200px);
 }
 
 
 /* Header */
-
 .header {
   position: fixed;
   top: 0;
@@ -144,6 +140,135 @@ body {
 /*Estilos de principal*/
 
 
+/*Estilos de nuestro cafe*/
+
+.nuestro-cafe {
+  margin: 0;
+  background-color: #fff;
+  padding: 2.5em 0;
+}
+
+.nuestro-cafe__header {
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+.nuestro-cafe__subtitle {
+  color: #c7a17a;
+  margin-bottom: 0.9375em;
+}
+
+.nuestro-cafe__title {
+  font-size: 30px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #2d2a2a;
+
+}
+
+.nuestro-cafe__divider {
+  width: 5em;
+  height: 0.25em;
+  background-color: #c7a17a;
+  margin: 1em auto;
+}
+
+.nuestro-cafe__columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nuestro-cafe__column {
+  width: auto;
+  text-align: left;
+  margin: 1.875em;
+}
+
+.nuestro-cafe__section {
+  margin-bottom: 2.5em;
+}
+
+.nuestro-cafe__title--tipo {
+  color: #c7a17a;
+  font-size: 20px;
+  line-height: 1.4; 
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  
+  padding-bottom: 0.375em-2;
+}
+
+.nuestro-cafe__description {
+  color: #777;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.nuestro-cafe__img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*Estilos de sucursales*/
+
+.sucursales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('https://tiendadecafe.com.ar/wp-content/uploads/2021/03/home-tienda.jpg?id=425');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  text-align: center;
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+.sucursales__text--uno {
+  font-size: 36px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 200;
+}
+
+.sucursales__text--dos {
+  font-size: 56px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  color: #c7a17a;
+  font-weight: 700;
+}
+
+.sucursales__text--tres {
+  font-size: 16px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+.sucursales__button {
+  margin-top: 1rem;
+  padding: 12px 28px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.sucursales__button:hover {
+  background: white;
+  color: black;
+}
 
 
 /* Footer */
@@ -342,6 +467,35 @@ body {
 
   .nav__link--inicio {
     display: none;
+  }
+
+  /* Seccion Nuestro cafe */
+  .nuestro-cafe__columns {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .nuestro-cafe__column {
+    width: 20em;
+    margin: 0;
+  }
+
+  .nuestro-cafe__img {
+    width: 20em;
+    height: 30em;
+    object-fit: cover;
+    object-position: center;
+    padding-bottom:1.875em;
+  }
+
+  .nuestro-cafe__column:first-of-type {
+    text-align: right;
+    padding: 0 3em 0 0;
+  }
+  
+  .nuestro-cafe__column:last-of-type {
+    padding: 0 0 0 3em;
   }
 
   /* Footer */
