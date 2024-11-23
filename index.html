@@ -13,10 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css"> <!-- Enlace a un archivo CSS -->
     <script src="./js/toggleMenu.js" defer></script>
+    <script src="./js/carouselIndex.js" defer></script>
+    <script src="./js/carouselIndexProducts.js" defer></script>
 </head>
 
 <body>
-
     <!-- Header -->
     <header class="header">
         <div class="header__top"></div>
@@ -45,13 +46,153 @@
     </header>
 
     <main class="content">
-        <section class="principal"></section>
+        <!-- Seccion principal -->
+        <div class="carouselPrincipal">
+            <div class="carouselPrincipal__container">
+                <div class="carouselPrincipal__slide">
+                    <img src="./img/index/sidebar_cafe01_tablet_v2.jpg" alt="Imagen principal 1"
+                        class="carouselPrincipal__image" />
+                    <div class="carouselPrincipal__content">
+                        <h2 class="carouselPrincipal__subtitle">Tu café preferido</h2>
+                        <h2 class="carouselPrincipal__title">SIEMPRE CERCA</h2>
+                        <p class="carouselPrincipal__description">Blends, varietales, cafés del mundo.</p>
+                        <p class="carouselPrincipal__description">Encontrá tu Tienda mas cercana y tentate con nuestros sabores.</p>
+                        <button class="carouselPrincipal__button">ENCONTRANOS</button>
+                    </div>
+                </div>
+                <div class="carouselPrincipal__slide">
+                    <img src="./img/index/sidebar_tostadores02_tablet.jpg" alt="Imagen principal 2"
+                        class="carouselPrincipal__image" />
+                    <div class="carouselPrincipal__content">
+                        <h2 class="carouselPrincipal__subtitle">Proba nuestras</h2>
+                        <h2 class="carouselPrincipal__title">CAPSULAS</h2>
+                        <p class="carouselPrincipal__description">100% aluminio compatibles con máquinas Nespresso*</p>
+                        <button class="carouselPrincipal__button">DESCUBRILAS</button>
+                    </div>
+                </div>
+                <div class="carouselPrincipal__slide">
+                    <img src="./img/index/sidebar_capsulas04_tablet_v2.jpg" alt="Imagen principal 3"
+                        class="carouselPrincipal__image" />
+                    <div class="carouselPrincipal__content">
 
-        <section class="productos"></section>
+                        <h2 class="carouselPrincipal__subtitle">Desde 2007</h2>
+                        <h2 class="carouselPrincipal__title">
+                            TOSTANDO TU CAFÉ </h2>
+                        <p class="carouselPrincipal__description">Años de experiencia cuidando cada paso del proceso.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carouselPrincipal__arrow carouselPrincipal__arrow--prev">&#10094;</button>
+            <button class="carouselPrincipal__arrow carouselPrincipal__arrow--next">&#10095;</button>
+
+            <div class="carouselPrincipal__indicators">
+                <span class="carouselPrincipal__dot"></span>
+                <span class="carouselPrincipal__dot"></span>
+                <span class="carouselPrincipal__dot"></span>
+            </div>
+        </div>
+
+        <!-- Seccion nuestros productos -->
+        <section class="nuestrosProductos">
+            <h3 class="nuestrosProductos__title">NUESTROS PRODUCTOS</h3>
+            <div class="nuestrosProductos__divider"></div>
+
+        </section>
+        <section class="carousel">
+            <div class="carousel__container">
+                <button class="carousel__arrow carousel__arrow--left">&#8249;</button>
+                <div class="carousel__track">
+
+
+                    <div class="carousel__item">
+                        <div class="carousel__itemImg">
+                            <img src="./img/index/Productos_cafe_packs_BRASIL_frente.jpg" alt="Cafe brasil"
+                                class="imagen-principal">
+                            <img src="./img/index/Productos_cafe_packs_BRASIL_frente_prueba.jpg" alt="Cafe brasil click"
+                                class="imagen-hover">
+                        </div>
+                        <p class="carousel__item--text">Café Brasil</p>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="carousel__itemImg">
+                            <img src="./img/index/Productos_cafe_packs_BARISTA_frente.jpg" alt="Cafe barista">
+                            <img src="./img/index/Productos_cafe_packs_BARISTA_frente_prueba.jpg"
+                                alt="Cafe barista click" class="imagen-hover">
+                        </div>
+                        <p class="carousel__item--text">Café Barista</p>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="carousel__itemImg">
+                            <img src="./img/index/Productos_cafe_packs_MINKA_frente.jpg" alt="Cafe Minka">
+                            <img src="./img/index/Productos_cafe_packs_minka_frente_prueba.jpg" alt="Cafe Minka click"
+                                class="imagen-hover">
+                        </div>
+                        <p class="carousel__item--text">Café Minka</p>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="carousel__itemImg">
+                            <img src="./img/index/Productos_cafe_packs_COLOMBIA_frente.jpg" alt="Cafe Colombia">
+                            <img src="./img/index/Productos_cafe_packs_COLOMBIA_frente_prueba.jpg"
+                                alt="Cafe Colombia click" class="imagen-hover">
+                        </div>
+                        <p class="carousel__item--text">Café Colombia</p>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="carousel__itemImg">
+                            <img src="./img/index/Productos_cafe_packs_SCEGLIERE_frente.jpg" alt="Cafe Scegliere">
+                            <img src="./img/index/Productos_cafe_packs_SCEGLIERE2_frente_prueba-768x768.jpg"
+                                alt="Cafe Scegliere click" class="imagen-hover">
+                        </div>
+                        <p class="carousel__item--text">Café Scegliere</p>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="carousel__itemImg">
+                            <img src="./img/index/Productos_cafe_packs_descaf_frente.jpg" alt="Café Descafeinado">
+                            <img src="./img/index/Productos_cafe_packs_DESCAFEINADO_frente_prueba.jpg"
+                                alt="Café Descafeinado" class="imagen-hover">
+                        </div>
+                        <p class="carousel__item--text">Café Descafeinado</p>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="carousel__itemImg">
+                            <img src="./img/index/capsulas_taza_barista.jpg" alt="Capsulas Café Barista">
+                            <img src="./img/index/capsulas_intensidad.jpg" alt="Cápsulas de Café Intensidad click"
+                                class="imagen-hover">
+                        </div>
+                        <p class="carousel__item--text">Cápsulas de Café Barista</p>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="carousel__itemImg">
+                            <img src="./img/index/capsulas_taza_scegliere.jpg" alt="Image 8">
+                            <img src="./img/index/capsulas_intensidad.jpg" alt="Cápsulas de Café Intensidad click"
+                                class="imagen-hover">
+                        </div>
+                        <p class="carousel__item--text">Cápsulas de Café Scegliere</p>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="carousel__itemImg">
+                            <img src="./img/index/capsulas_taza_colombia.jpg" alt="Image 9">
+                            <img src="./img/index/capsulas_intensidad.jpg" alt="Cápsulas de Café Intensidad click"
+                                class="imagen-hover">
+                        </div>
+                        <p class="carousel__item--text">Cápsulas de Café Colombia</p>
+                    </div>
+                    <div class="carousel__item">
+                        <div class="carousel__itemImg">
+                            <img src="./img/index/capsulas_taza_minka.jpg" alt="Image 10">
+                            <img src="./img/index/capsulas_intensidad.jpg" alt="Cápsulas de Café Intensidad click"
+                                class="imagen-hover">
+                        </div>
+                        <p class="carousel__item--text">Cápsulas de Café Minka</p>
+                    </div>
+                </div>
+                <button class="carousel__arrow carousel__arrow--right">&#8250;</button>
+            </div>
+            <div class="carousel__indicators"></div>
+        </section>
 
         <!-- Seccion Secretos del barista y nuestros platos -->
-
-        
         <section class="platosSecretos">
             <section class="platosSecretos__secretos">
                 <div class="platosSecretos__content">

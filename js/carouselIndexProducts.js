@@ -1,5 +1,5 @@
 // Script para el segundo carrusel
-(function() {
+(function () {
   const track = document.querySelector('.carousel__track');
   const items = document.querySelectorAll('.carousel__item');
   const leftArrow = document.querySelector('.carousel__arrow--left');
@@ -8,6 +8,8 @@
 
   let visibleItems = 2;
   let currentPage = 0;
+  let itemWidth;
+
 
   function updateVisibleItems() {
     const width = window.innerWidth;
@@ -29,12 +31,19 @@
   }
 
   function updateCarousel() {
-    const itemWidth = items[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${currentPage * visibleItems * itemWidth}px)`;
+    itemWidth = items[0].getBoundingClientRect().width;
 
+    // Mueve el track según la página actual
+    const offset = currentPage * itemWidth * visibleItems;
+    track.style.transform = `translateX(-${offset}px)`;
+  
+    // Actualiza los indicadores
     const indicators = document.querySelectorAll('.carousel__indicator');
     indicators.forEach((indicator, index) => indicator.classList.toggle('carousel__indicator--active', index === currentPage));
+  
+    // Para depuración}
   }
+
 
   leftArrow.addEventListener('click', () => {
     currentPage = currentPage === 0 ? Math.ceil(items.length / visibleItems) - 1 : currentPage - 1;
@@ -56,4 +65,12 @@
 
   window.addEventListener('resize', updateVisibleItems);
   updateVisibleItems();
+
+  console.log({
+    itemWidth,
+    visibleItems,
+    currentPage,
+    transformValue: -currentPage * visibleItems * itemWidth,
+  });
 })();
+

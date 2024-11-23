@@ -139,11 +139,295 @@ body {
 
 /*Estilos de principal*/
 
+.carouselPrincipal {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carouselPrincipal__container {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselPrincipal__slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.carouselPrincipal__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carouselPrincipal__content {
+  position: absolute;
+  bottom: 35%;
+  left: 10%;
+  color: white;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  
+}
+
+
+.carouselPrincipal__content > * {
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carouselPrincipal__content > *:last-child {
+  margin-bottom: 0;
+}
+
+.carouselPrincipal__content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carouselPrincipal__content.show > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carouselPrincipal__subtitle {
+  font-size: 48px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 40px
+}
+
+
+.carouselPrincipal__title {
+  font-size: 56px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.carouselPrincipal__description {
+  font-size: 15.4px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.carouselPrincipal__button {
+  padding: 0.8rem 1.5rem;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, .5);
+  font-size: 14px;
+  color: #FFF;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.carouselPrincipal__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  color: white;
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carouselPrincipal__arrow--prev {
+  left: 10px;
+}
+
+.carouselPrincipal__arrow--next {
+  right: 10px;
+}
+
+.carouselPrincipal__indicators {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carouselPrincipal__dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid gray; 
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carouselPrincipal__dot--active {
+  background-color: white;
+  border: 2px solid white; 
+}
+
+.carouselPrincipal__slide--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Estilos de nuestros productos*/
+.nuestrosProductos {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 5vw;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.nuestrosProductos__title {
+  font-size: 30px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #2d2a2a;
+  padding-bottom: 30px;
+}
+
+.nuestrosProductos__divider {
+  background-color: #c7a17a;
+  height: 2px;
+  width: 120px;
+  margin-bottom: 30px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.carousel__container {
+  display: flex;
+  align-items: center;
+}
+
+.carousel__track {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  transform: translateX(0%);
+}
+
+.carousel__item {
+  flex: 0 0 calc(100% / 2);
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carousel__item--text {
+  color: rgb(58, 56, 56);
+  font-size: 14px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.carousel__itemImg {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel__itemImg img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+.imagen-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 3s ease-in-out,  transform 2.5s ease-in-out;
+}
+
+.carousel__itemImg:hover .imagen-hover {
+  opacity: 1;
+  transform: scale(1.2); 
+  transition: opacity 2.5s ease-in-out, transform 2s ease-in-out;
+}
+
+.carousel__itemImg:hover .imagen-principal {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.carousel__item img {
+  width: 100%;
+  display: block;
+}
+
+.carousel__arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.carousel__arrow--left {
+  left: 10px;
+}
+
+.carousel__arrow--right {
+  right: 10px;
+}
+
+.carousel__indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.carousel__indicator {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  border: 2px solid gray; 
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.carousel__indicator:hover {
+  border: 2px solid black; 
+}
+
+.carousel__indicator--active {
+  opacity: 1;
+  border: 2px solid black; 
+  background-color: black;
+}
 
 /*Secretos del barista y nuestros plato*/
 .platosSecretos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   gap: 2em;
@@ -151,7 +435,7 @@ body {
   flex-wrap: wrap;
 }
 
-.platosSecretos__platos, 
+.platosSecretos__platos,
 .platosSecretos__secretos {
   width: 100vh;
   height: 20em;
@@ -175,7 +459,7 @@ body {
   background-image: url('../img/index/bannerpromo_cafe_02_v2.jpg');
 }
 
-.platosSecretos__platos::before, 
+.platosSecretos__platos::before,
 .platosSecretos__secretos::before {
   content: '';
   position: absolute;
@@ -183,8 +467,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1; 
+  z-index: 1;
 }
+
 .platosSecretos__content--title {
   color: hwb(0 100% 0%);
   font-size: 36px;
@@ -221,7 +506,7 @@ body {
 }
 
 /* Efecto hover */
-.platosSecretos__platos:hover, 
+.platosSecretos__platos:hover,
 .platosSecretos__secretos:hover {
   background-position: center top;
 }
@@ -283,10 +568,10 @@ body {
 .nuestro-cafe__title--tipo {
   color: #c7a17a;
   font-size: 20px;
-  line-height: 1.4; 
+  line-height: 1.4;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
   font-weight: 600;
-  
+
   padding-bottom: 0.375em-2;
 }
 
@@ -316,9 +601,9 @@ body {
   background-position: center;
   min-height: 100vh;
   text-align: center;
-  margin: 0; 
+  margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .sucursales__text--uno {
@@ -491,7 +776,11 @@ body {
 }
 
 /* Media queries */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .carousel__item {
+    flex: 0 0 calc(100% / 3);
+  }
+}
 
 @media (min-width: 768px) {}
 
@@ -563,7 +852,14 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  
+
+  /* carousel */
+  .carousel__item {
+    flex: 0 0 calc(100% / 5);
+    /* 5 items visible */
+  }
+
+
 
   /* Seccion Nuestro cafe */
   .nuestro-cafe__columns {
@@ -582,14 +878,14 @@ body {
     height: 30em;
     object-fit: cover;
     object-position: center;
-    padding-bottom:1.875em;
+    padding-bottom: 1.875em;
   }
 
   .nuestro-cafe__column:first-of-type {
     text-align: right;
     padding: 0 3em 0 0;
   }
-  
+
   .nuestro-cafe__column:last-of-type {
     padding: 0 0 0 3em;
   }
