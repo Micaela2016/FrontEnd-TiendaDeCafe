@@ -1,0 +1,185 @@
+/* Estilos sección portada*/
+.metodos__portada {
+  padding: 350px 10%;
+  background-image: url(../img/metodos/metodos-portada.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.metodos__title-portada {
+  color: white;
+  font-size: 22px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+/* Estilos receta */
+.metodos__container-receta {
+  background-color: #dddddd;
+  padding: 35px;
+  padding-bottom: 35px;
+  margin-top: 10px;
+}
+
+.metodos__title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #777;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Estilos paso a paso */
+.metodos__container-pasos {
+  padding: 35px 5%;
+}
+
+.metodos__line {
+  background-color: #dddddd;
+  height: 1px;
+  width: 100%;
+}
+
+.metodos__item-paso {
+  margin-bottom: 35px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 70px;
+}
+
+.metodos__container-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.metodos__container-image img {
+  width: 100%;
+  max-width: 462px;
+  object-fit: contain;
+  object-position: top;
+}
+
+.metodos__container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 462px;
+  margin: 0 auto;
+}
+
+.metodos__item-title {
+  color: #777;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+.metodos__text {
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  color: #777;
+}
+
+/* Estilos invitacion*/
+.metodos__container-invitacion {
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.metodos__item-invitacion {
+  color: #777;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-style: italic;
+  line-height: 1.5;
+  width: 50vw;
+  min-width: 300px;
+  text-align: center;
+}
+
+/* Estilos banner*/
+.metodos__banner {
+  background-image: url(../img/metodos/metodos-banner.jpg);
+  padding: 270px 10%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metodos__title-banner-top {
+  color: #999999;
+  font-size: 36px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 0.5;
+  display: flex;
+  justify-content: center;
+}
+
+.metodos__title-banner-bottom {
+  color: #fff;
+  font-size: 56px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.metodos__button {
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #303030;
+  border-color: rgba(255, 255, 255, 20);
+  border-width: 1px;
+  background-color: white;
+  cursor: pointer;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+/* Media queries */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .metodos__item-paso {
+    flex-direction: row;
+  }
+
+  .metodos__container-image {
+    width: 50%;
+    justify-content: flex-end;
+  }
+
+  .metodos__container-text {
+    width: 50%;
+    align-items: flex-start;
+    max-width: 500px;
+    padding-right: 10%;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
+}
