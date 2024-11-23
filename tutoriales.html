@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutoriales - Tienda de cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/tutoriales.css" />
+    <!-- Enlace a un archivo CSS -->
+    <script src="./js/toggleMenu.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__top"></div>
+      <div class="header__bottom">
+        <button class="header__menu-button" onclick="toggleMenu()">
+          <img
+            src="./img/icon-burguer.png"
+            alt="icon-burguer"
+            class="header__icon-burguer"
+          />
+        </button>
+        <a href="/" class="header__logo">
+          <img
+            src="https://tiendadecafe.com.ar/wp-content/uploads/2021/02/tienda-de-cafe.png"
+            alt="Tienda de Café Logo"
+          />
+        </a>
+        <nav class="header__nav" id="navMenu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/" class="nav__link nav__link--inicio">INICIO</a>
+            </li>
+            <li class="nav__item">
+              <a href="tienda.html" class="nav__link">NUESTRO CAFÉ</a>
+            </li>
+            <li class="nav__item">
+              <a href="tutoriales.html" class="nav__link">TUTORIALES</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">LOCALES</a></li>
+            <li class="nav__item">
+              <a href="menu-tienda.html" class="nav__link">NUESTRO MENÚ</a>
+            </li>
+            <li class="nav__item">
+              <a href="trabaja-en-tdc.html" class="nav__link"
+                >TRABAJÁ CON NOSOTROS</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="franquicias.html" class="nav__link">FRANQUICIAS</a>
+            </li>
+            <li class="nav__item">
+              <a href="contacto.html" class="nav__link nav__link--contacto"
+                >CONTACTO</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="tutoriales__container">
+        <p class="tutoriales__text">
+          Nuestra intención es que estas guías sirvan como punto de partida. El
+          sabor de la taza puede ser modificado por el molinillo que utilices,
+          el café que elijas y por supuesto el agua. <br />
+          Cada cafetera o maquina es diferente, por lo cual se deben tomar estos
+          parámetros como pautas, no como leyes absolutas.
+        </p>
+        <p class="tutoriales__text">
+          Cuando revises nuestras guías de elaboración, veras que utilizamos grs
+          al hablar de la cantidad de agua. No es un error. Para nuestras
+          recetas equiparamos mililitros con gramos a fin de facilitar el pesado
+          en la preparación.
+        </p>
+        <p class="tutoriales__text italic">Pequeños tips</p>
+        <p class="tutoriales__text italic">
+          Cuanto mayor es el tiempo de extracción mas grueso se debe moler el
+          café.
+        </p>
+        <p class="tutoriales__text italic">
+          Cuanto mayor es la temperatura del agua, mas rápido se infusiona el
+          café.
+        </p>
+        <p class="tutoriales__text bold">Ahora si, a experimentar!</p>
+      </section>
+      <section class="tutoriales__container-pasos">
+        <div class="tutoriales__content-img">
+          <a href="metodos.html" class="tutoriales__img">
+            <div class="tutoriales__container-text">
+              <p class="tutoriales__item">ESPRESSO</p>
+              <p class="tutoriales__item-cta" href="">VER PASO A PASO ></p>
+            </div>
+            <img src="./img/tutoriales/espresso.jpg" alt="" />
+          </a>
+          <a class="tutoriales__img">
+            <div class="tutoriales__container-text">
+              <p class="tutoriales__item">PRENSA FRANCESA</p>
+              <p class="tutoriales__item-cta" href="">VER PASO A PASO ></p>
+            </div>
+            <img src="./img/tutoriales/prensa-francesa.jpg" alt="" />
+          </a>
+        </div>
+        <div class="tutoriales__content-img">
+          <a class="tutoriales__img">
+            <div class="tutoriales__container-text">
+              <p class="tutoriales__item">CHEMEX</p>
+              <p class="tutoriales__item-cta" href="">VER PASO A PASO ></p>
+            </div>
+            <img src="./img/tutoriales/chemex.jpg" alt="" />
+          </a>
+          <a class="tutoriales__img">
+            <div class="tutoriales__container-text">
+              <p class="tutoriales__item">AEROPRESS</p>
+              <p class="tutoriales__item-cta" href="">VER PASO A PASO ></p>
+            </div>
+            <img src="./img/tutoriales/aeropress.jpg" alt="" />
+          </a>
+        </div>
+        <div class="tutoriales__content-img">
+          <a class="tutoriales__img">
+            <div class="tutoriales__container-text">
+              <p class="tutoriales__item">MOKA</p>
+              <p class="tutoriales__item-cta" href="">VER PASO A PASO ></p>
+            </div>
+            <img src="./img/tutoriales/moka.jpg" alt="" />
+          </a>
+          <a class="tutoriales__img">
+            <div class="tutoriales__container-text">
+              <p class="tutoriales__item">FILTRO DE PAPEL</p>
+              <p class="tutoriales__item-cta" href="">VER PASO A PASO ></p>
+            </div>
+            <img src="./img/tutoriales/filtro-de-papel.jpg" alt="" />
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__column--logo">
+          <img
+            src="https://tiendadecafe.com.ar/wp-content/uploads/2021/02/tienda-de-cafe.png"
+            alt="Tienda de Café Logo"
+            class="footer__logo"
+          />
+        </div>
+        <section class="footer__column">
+          <div class="footer__column--links">
+            <h3 class="footer__title">CONTENIDOS</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="/" class="footer__link">Inicio</a>
+              </li>
+              <li class="footer__item">
+                <a href="tienda.html" class="footer__link">Nuestro Café</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Locales</a>
+              </li>
+              <li class="footer__item">
+                <a href="menu-tienda.html" class="footer__link">Nuestro Menú</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column--help">
+            <h3 class="footer__title">NECESITÁS AYUDA</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="tutoriales.html" class="footer__link">Tutoriales</a>
+              </li>
+              <li class="footer__item">
+                <a href="trabaja-en-tdc.html" class="footer__link"
+                  >Trabaja en TDC</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="franquicias.html" class="footer__link">Franquicias</a>
+              </li>
+              <li class="footer__item">
+                <a href="contacto.html" class="footer__link">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <div>
+          <div class="footer__column--subscribe">
+            <h3 class="footer__title title--subscribe">
+              SUSCRIBITE A NUESTRO NEWSLETTER
+            </h3>
+            <form class="footer__form">
+              <input
+                type="email"
+                placeholder="Tu email"
+                class="footer__input"
+                required
+              />
+              <button type="submit" class="footer__button">SUSCRIBIRME</button>
+            </form>
+          </div>
+
+          <div class="footer__column--conectate">
+            <h3 class="footer__title title--conectate">
+              CONECTATE CON NOSOTROS
+            </h3>
+            <div class="footer__social-icons">
+              <a href="https://www.facebook.com/Tiendadecafe"
+                ><img
+                  src="./img/facebook.png"
+                  alt="Facebook"
+                  class="footer__social-icon"
+              /></a>
+              <a href="https://www.instagram.com/tiendadecafear/"
+                ><img
+                  src="./img/instagram.png"
+                  alt="Instagram"
+                  class="footer__social-icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__text">
+          &copy; Copyright 2021 Tienda de café - Todos los derechos reservados.
+        </p>
+        <p class="footer__text">
+          Todos los logos, productos, marcas y nombres aquí utilizados son
+          propiedad registrada.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

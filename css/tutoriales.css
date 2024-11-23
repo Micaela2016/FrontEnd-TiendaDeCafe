@@ -1,0 +1,125 @@
+/* Estilos base */
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 5vw;
+  padding-top: 180px;
+  background-color: #fff;
+}
+
+/* Estilos para sección textos*/
+.tutoriales__container {
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 90%;
+}
+
+.tutoriales__text {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #777;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* Estilos sección paso a paso*/
+.tutoriales__container-pasos {
+  margin: 50px 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tutoriales__content-img {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.tutoriales__img {
+  position: relative;
+  overflow: hidden;
+}
+
+.tutoriales__container-text {
+  position: absolute;
+  padding: 30px;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.tutoriales__item {
+  color: white;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.tutoriales__item-cta {
+  color: white;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.4;
+  border-bottom: 2px solid #c7a17a;
+}
+
+.tutoriales__container-text--bottom {
+  bottom: 0;
+  left: 0;
+}
+
+.tutoriales__content-img img {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  filter: brightness(80%);
+}
+
+.tutoriales__content-img img:hover {
+  transform: scale(1.1);
+  filter: brightness(50%);
+}
+
+/* Media queries */
+@media (min-width: 576px) {
+  .tutoriales__content-img {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .tutoriales__content-img {
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
+}
