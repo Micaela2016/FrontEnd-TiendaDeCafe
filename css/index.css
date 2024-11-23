@@ -172,18 +172,17 @@ body {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
-  
+
 }
 
-
-.carouselPrincipal__content > * {
+.carouselPrincipal__content>* {
   margin-bottom: 10px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.carouselPrincipal__content > *:last-child {
+.carouselPrincipal__content>*:last-child {
   margin-bottom: 0;
 }
 
@@ -192,7 +191,7 @@ body {
   transform: translateY(0);
 }
 
-.carouselPrincipal__content.show > * {
+.carouselPrincipal__content.show>* {
   opacity: 1;
   transform: translateY(0);
 }
@@ -231,6 +230,10 @@ body {
   font-weight: 400;
 }
 
+.carouselPrincipal__button:hover {
+  border: 2px solid white;
+}
+
 .carouselPrincipal__arrow {
   position: absolute;
   top: 50%;
@@ -245,11 +248,11 @@ body {
 }
 
 .carouselPrincipal__arrow--prev {
-  left: 10px;
+  left: 15px;
 }
 
 .carouselPrincipal__arrow--next {
-  right: 10px;
+  right: 15px;
 }
 
 .carouselPrincipal__indicators {
@@ -264,7 +267,7 @@ body {
 .carouselPrincipal__dot {
   width: 10px;
   height: 10px;
-  border: 2px solid gray; 
+  border: 2px solid gray;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -272,7 +275,7 @@ body {
 
 .carouselPrincipal__dot--active {
   background-color: white;
-  border: 2px solid white; 
+  border: 2px solid white;
 }
 
 .carouselPrincipal__slide--active {
@@ -340,6 +343,10 @@ body {
   font-weight: bold;
 }
 
+.carousel__item--text:hover {
+  color: gray;
+}
+
 .carousel__itemImg {
   position: relative;
   width: 100%;
@@ -358,12 +365,12 @@ body {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 3s ease-in-out,  transform 2.5s ease-in-out;
+  transition: opacity 3s ease-in-out, transform 2.5s ease-in-out;
 }
 
 .carousel__itemImg:hover .imagen-hover {
   opacity: 1;
-  transform: scale(1.2); 
+  transform: scale(1.2);
   transition: opacity 2.5s ease-in-out, transform 2s ease-in-out;
 }
 
@@ -408,19 +415,19 @@ body {
   height: 10px;
   border: none;
   border-radius: 50%;
-  border: 2px solid gray; 
+  border: 2px solid gray;
   margin: 0 5px;
   cursor: pointer;
   opacity: 0.5;
 }
 
 .carousel__indicator:hover {
-  border: 2px solid black; 
+  border: 2px solid black;
 }
 
 .carousel__indicator--active {
   opacity: 1;
-  border: 2px solid black; 
+  border: 2px solid black;
   background-color: black;
 }
 
@@ -433,6 +440,8 @@ body {
   gap: 2em;
   padding: 20px;
   flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
 }
 
 .platosSecretos__platos,
@@ -448,7 +457,17 @@ body {
   background-position: center;
   cursor: pointer;
   position: relative;
-  transition: background-position 1s ease-in-out;
+  transition: transform 0.3s ease, background-position 0.3s ease;
+  transform-origin: center center;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.platosSecretos__platos:hover,
+.platosSecretos__secretos:hover {
+  background-size: 120%;
+  background-position: center top;
 }
 
 .platosSecretos__platos {
@@ -459,15 +478,9 @@ body {
   background-image: url('../img/index/bannerpromo_cafe_02_v2.jpg');
 }
 
-.platosSecretos__platos::before,
-.platosSecretos__secretos::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
+.platosSecretos__content {
+  position: relative;
+  z-index: 2; 
 }
 
 .platosSecretos__content--title {
